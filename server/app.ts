@@ -22,7 +22,6 @@ import bodyparser from './middlewares/bodyparser'
 app.use(bodyparser)
 
 // router
-import main from './routes/index'
-app.use(main.routes())
+app.use(require('./routes/index'))
 
 module.exports = app
