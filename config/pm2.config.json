@@ -1,10 +1,11 @@
 {
   "apps": [{
     "name": "app",
-    "script": "./server/app.ts",
+    "script": "./server/index.ts",
     "exec_mode": "fork",
     "env": {
-      "NODE_ENV": "production"
+      "NODE_ENV": "production",
+      "PORT": "4000"
     },
     "watch": [
       "server"
