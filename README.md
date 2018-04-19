@@ -42,6 +42,22 @@ npm run prod-stop
 
 ```
 
+## ES lint
+
+This project use the standrad to lint the typescript file.
+
+If you don't want to use eslint, you can do like this:
+
+```json
+// package.json
+-- "dev": "nodemon server/index.ts --exec 'npm run lint && ts-node'",
+
+++ "dev": "nodemon server/index.ts",
+
+```
+
+If you want to change the lint config, you can editor the `.eslintrc.js`.
+
 ## Directory Structure
 
 ```
