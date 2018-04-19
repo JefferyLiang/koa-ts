@@ -1,0 +1,5 @@
+/client/**
+/config/**
+/public/**
+/log/**
+/node_modules/**

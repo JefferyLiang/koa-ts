@@ -1,11 +1,9 @@
-import http = require('http')
-import debug = require('debug')
-import paht = require('path')
-import fs = require('fs')
+const http = require('http')
+const debug = require('debug')
 const app = require('./app')
 
 // Get listening port number
-let listenPort = normalizePort( process.env.PORT || '3000' )
+let listenPort = normalizePort(process.env.PORT || '3000')
 
 // Create server
 let server = http.createServer(app.callback())
@@ -34,15 +32,13 @@ function onError (error: any) {
 
   let bind = typeof listenPort === 'string' ? `Pipe ${listenPort}` : `Port ${listenPort}`
   switch (error.code) {
-    case 'EACCES' :
+    case 'EACCES':
       console.error(`${bind} requires elevated privileges`)
       process.exit(1)
-      break
-    case 'EADDRINUSE' :
+    case 'EADDRINUSE':
       console.error(`${bind} is already in use`)
       process.exit(1)
-      break
-    default :
+    default:
       throw error
   }
 }
